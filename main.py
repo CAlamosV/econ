@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from intro import show_intro
 from rct import show_rct
+from ols import show_ols
 from panel_data import show_panel_data
 from did import show_did
 from iv import show_iv
@@ -16,6 +17,7 @@ with st.sidebar:
         options=[
             "Introduction", 
             "Randomized Control Trials", 
+            "Ordinary Least Squares (OLS)",
             "Panel Data: Fixed Effects", 
             "Difference-in-Differences (DiD)", 
             "Instrumental Variables (IV)", 
@@ -31,6 +33,8 @@ if selected == "Introduction":
     show_intro()
 elif selected == "Randomized Control Trials":
     show_rct()
+elif selected == "Ordinary Least Squares (OLS)":
+    show_ols()
 elif selected == "Panel Data: Fixed Effects":
     show_panel_data()
 elif selected == "Difference-in-Differences (DiD)":
