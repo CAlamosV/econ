@@ -157,8 +157,7 @@ def show_did():
     We can now estimate the following OLS regression model:
     $$
     \\begin{aligned}
-    Y_{i} = & \ \\beta_{0} + \\beta_{1} \\text{SchoolConstruction}_{p(i)} + \\beta_{2} \\text{SchoolConstruction}_{p(i)} \\times \\text{Young}_{i} \\\\
-    & + \\delta_{p(i)} + \\gamma_{c(i)} + \\varepsilon_{i}
+    Y_{i} = & \ \\beta_{0} + \\beta_{1} \\text{SchoolConstruction}_{p(i)} + \\beta_{2} \\text{SchoolConstruction}_{p(i)} \\times \\text{Young}_{i} + \\delta_{p(i)} + \\gamma_{c(i)} + \\varepsilon_{i}
     \\end{aligned}
     $$
 
