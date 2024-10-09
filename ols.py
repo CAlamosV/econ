@@ -83,7 +83,7 @@ def show_ols():
     Notice $X$ must have full column rank for $(X^TX)^{-1}$ to exist and for the second derivative to be positive definite.
     We call this condition the "no multicollinearity" assumption.
 
-    Notice that the expression for $\widehat{\beta_j}$ is equivalent to the following:
+    The expression for $\widehat{\beta_j}$ is equivalent to the following:
     $$
     \widehat{\beta}_j = \frac{\sum_{i=1}^n x_iy_i}{\sum_{i=1}^n x_i^2} = \frac{\operatorname{Cov}(x_j, y)}{\operatorname{Var}(x_j)}
     $$
@@ -240,7 +240,7 @@ def show_ols():
     $$
     \widehat{\operatorname{SE}}(\widehat{\beta}) = \sqrt{\operatorname{diag}(\widehat{\operatorname{Var}}(\widehat{\beta}))} = \sqrt{\widehat{\sigma}^2\operatorname{diag}(X^TX)^{-1}} = \sqrt{\frac{1}{n - k} \varepsilon^T\varepsilon \operatorname{diag}((X^TX)^{-1})}
     $$
-    Typically, we indicate which coefficients are significantly different from 0 by conducting a t-test, as outlined in the previous section.
+    Typically, we indicate which coefficients are significantly different from 0 by conducting a t-test using standard errors, as outlined in the previous section.
     ''')
 
     df = pd.read_stata('data/bertrand_audit_data.dta')

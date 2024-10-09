@@ -4,6 +4,10 @@ import numpy as np
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 import seaborn as sns
+# set latex font
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
+plt.rc('font', size=11)
 
 #config
 sns.set_style("whitegrid")
@@ -14,7 +18,7 @@ plt.rcParams["mathtext.fontset"] = "cm"
 def create_index():
     st.markdown('### Table of Contents')
     st.markdown('''
-    1. [Motivation: The Effect of Online Learning on Student Performance](#motivation-the-effect-of-online-learning-on-student-performance)
+    1. [Introduction and Motivation](#introduction-and-motivation)
     2. [Hypothesis Testing: The Difference in Means Test](#hypothesis-testing-the-difference-in-means-test)
     3. [The Potential Outcomes Framework](#the-potential-outcomes-framework)
     ''')
@@ -22,12 +26,13 @@ def create_index():
 def show_rct():
     st.title("Randomized Control Trials (RCTs) and Hypothesis Testing")
     create_index()
-    st.write("### Introduction")
+    st.write("### Introduction and Motivation")
     st.write("""
-    Economists often seek to understand the causal effect of one variable on another, such as the impact of education on earnings or the effect of a new policy on economic growth.
-    However, establishing causality is challenging due to the presence of confounding variables that can bias our estimates.
+    Economists often seek to understand the causal effect of one variable on another, such as the effect of a new policy on economic growth or the effect of online learning on student performance.
+    However, establishing causality by simply looking at correlations (e.g., between education and earnings) is
+    challenging due to the presence of what are known as confounding variables.
 
-    For example, suppose that we want to evaluate the impact of moving a class online on student performance. 
+    To illustrate this, suppose that we want to evaluate the impact of moving a class online on student performance. 
     We can't simply offer two versions of a class, one online and one in-person, and then compare 
     the performance of the two groups of students. This is because the students who choose to 
     take the online class may be different from those who choose to take the in-person class. 
@@ -36,20 +41,6 @@ def show_rct():
     To account for this, we can randomize students into the two groups: online (the "treatment" group) and in-person (the "control" group).
     By randomly assigning subjects to treatment and control, RCTs create comparable groups that differ only in their exposure to the treatment.
     This means that any differences in outcomes between the two groups can be attributed to the treatment itself, rather than to pre-existing differences between the groups.
-
-    While running RCTs aren't always feasible, they represent the ideal scenario for determining causality.
-    Understanding RCTs provides crucial intuition for interpreting more complex econometric methods we'll cover later like Instrumental Variables (IV) or Difference-in-Differences (DiD).
-    These techniques aim to replicate the conditions of an RCT when randomization isn't possible.
-    """)
-    st.write("### Motivation: The Effect of Online Learning on Student Performance")
-    st.write("""
-    Suppose we want to evaluate the impact of moving a class online on student performance. 
-    We can't simply offer two versions of a class, one online and one in-person, and then compare 
-    the performance of the two groups of students. This is because the students who choose to 
-    take the online class may be different from those who choose to take the in-person class. 
-    For example, students who take the online class may be more motivated and self-directed. 
-    To account for this, we can randomize students into the two groups. This is called a 
-    randomized controlled trial, or RCT for short.
     """)
 
     st.write("""[Alpert et al. 2016](https://www.aeaweb.org/articles?id=10.1257/aer.p20161057) conduct exactly this analysis. Let's first clean their raw data:""")
@@ -97,7 +88,7 @@ def show_rct():
             return df
         """, language='python')
 
-    st.write("We now have the following dataframe:")
+    st.write("We've now wrangled the data into the following format:")
     temp = df.copy()
     temp["Online Format"] = temp["Online Format"].astype(str)
     st.dataframe(temp.head(3), hide_index=True, width=350)

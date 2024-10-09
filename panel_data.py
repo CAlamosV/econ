@@ -42,7 +42,7 @@ def show_panel_data():
     $$
 
     Where $Y_{it}$ represents the wage of individual $i$ at time $t$, $X_{it}$ are observable characteristics including marriage status and $u_i$ are time-invariant unobservable characteristics.
-    (Note that the intercept is included in $u_i$ for simplicity.)
+    (Note that the intercept is included in $u_i$ for simplicity).
     To control for these unobservables, we can a use fixed effects model.
     To use this type of model, we need to observe multiple time periods for each individual.
     All the fixed effects model amounts to is demeaning the data.
@@ -130,7 +130,7 @@ def show_panel_data():
     exog = sm.add_constant(df[['experience', 'experience_squared', 'is_married', 'is_union_member']])
     results = sm.OLS(endog, exog).fit().summary().tables[1]
     st.write('''
-    We can first attempt a naive OLS regression, without controlling for individual fixed effects.
+    We can first attempt a naive OLS regression without controlling for individual fixed effects.
     This is known as a "pooled" regression, since we are pooling all the data together.
     This yields the following results:
     ''')
