@@ -10,6 +10,7 @@ sns.set_style("whitegrid")
 sns.set_palette("husl")
 # plt.rcParams["font.sans-serif"] = "Arial"
 # plt.rcParams["mathtext.fontset"] = "cm"
+plt.rcParams['text.usetex'] = False
 
 def create_index():
     st.markdown('### Table of Contents')

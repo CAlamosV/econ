@@ -5,6 +5,9 @@ import plotly.graph_objects as go
 import pandas as pd
 from scipy.stats import norm
 
+plt.rcParams['text.usetex'] = False
+
+
 def create_index():
     st.markdown('### Table of Contents')
     st.markdown('''
