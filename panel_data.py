@@ -53,7 +53,7 @@ def show_panel_data():
     $$
     \\begin{aligned}
     \\bar{Y}_{it} &= \\beta_1 \\bar{X}_{it} + \\beta_2 u_i 
-    \end{aligned}
+    \\end{aligned}
     $$
     Where $\\bar{X}_{it}$ is defined similarly to $\\bar{Y}_{it}$. (The error term has disappeared from the equation, since its mean is zero by contruction).
     We can then subtract this equation from the original equation to get:

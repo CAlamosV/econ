@@ -202,7 +202,7 @@ def show_did():
         p_value = np.round(result.pvalues[term], 3)
         return coef, std_err, p_value
 
-    # Extract estimates for the interaction term (\Beta_2)
+    # Extract estimates for the interaction term (beta 2)
     term = 'school_construction_x_young'
     education_coef, education_std_err, education_p_value = get_estimates(education_results, term)
     log_wage_coef, log_wage_std_err, log_wage_p_value = get_estimates(log_wage_results, term)
@@ -220,7 +220,7 @@ def show_did():
     st.dataframe(df_results, hide_index=True, width=500) # Display the results
 
     st.markdown("""
-    Thus, we find that high levels of school construction in Indonesia led to an increase of 0.18 years of education and a 1.4\% increase in wages for young children.
+    Thus, we find that high levels of school construction in Indonesia led to an increase of 0.18 years of education and a 1.4 percent increase in wages for young children.
 
     We may also want to know what this implies about the returns to an additional year of schooling.
     To answer questions like these, we need to introduce the concept of Instrumental Variables (IVs).
