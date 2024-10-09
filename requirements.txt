@@ -171,7 +171,7 @@ prompt_toolkit==3.0.46
 protobuf==5.27.2
 prov==2.0.0
 psutil==5.9.8
-psycopg2==2.9.9
+psycopg2-binary
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pyarrow==17.0.0
