@@ -5,10 +5,10 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 import numpy as np
 
-# Set configuration for plotting
-plt.rc('text', usetex=True)
-plt.rc('font', family='serif')
-plt.rc('font', size=11)
+# # Set configuration for plotting
+# plt.rc('text', usetex=True)
+# plt.rc('font', family='serif')
+# plt.rc('font', size=11)
 
 # Title and Introduction
 def create_index():

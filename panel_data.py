@@ -13,8 +13,8 @@ import seaborn as sns
 #config
 sns.set_style("whitegrid")
 sns.set_palette("husl")
-plt.rcParams["font.sans-serif"] = "Arial"
-plt.rcParams["mathtext.fontset"] = "cm"
+# plt.rcParams["font.sans-serif"] = "Arial"
+# plt.rcParams["mathtext.fontset"] = "cm"
 
 def create_index():
     st.markdown('### Table of Contents')
