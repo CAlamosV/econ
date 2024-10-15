@@ -245,7 +245,7 @@ sqlparse==0.5.0
 srsly==2.4.8
 sseclient-py==1.8.0
 stack-data==0.6.3
-starlette==0.37.2
+starlette==0.40.0
 statsmodels==0.14.2
 storage3==0.7.6
 streamlit==1.36.0
